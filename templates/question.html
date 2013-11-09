@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trả lời câu hỏi - chọn đáp án đúng nhất</title>
+</head>
+<body>
+
+    <form action="#" method="get">
+        <h2>Trả lời câu hỏi sau bằng cách chọn đáp án đúng nhất</h2>
+        <h3>{{ cau_hoi }}</h3>
+        {% for dap_an in danh_sach_dap_an %}
+            <input type="radio" name="dap_an" value="{% cycle 'A','B','C','D' %}"> {{ dap_an }}
+        {% endfor %}
+       <button class="btn btn-lg btn-primary btn-block" type="submit">Nộp bài</button>
+    </form>
+
+</body>
+</html>
